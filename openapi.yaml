@@ -1,0 +1,80 @@
+openapi: 3.0.3
+info:
+  title: HashOCR Server API
+  description: |-
+    This is a HashOCR API based on the OpenAPI 3.0 specification.  
+  
+  version: "1.0.0"
+servers:
+  - url: http://localhost/api/v1
+tags:
+  - name: pdf2json
+    description: Access and manage pdf to json conversion
+paths:
+  /pdf2json:
+    post:
+      tags:
+        - pdf2json
+      summary: Add or update a slide id for the user bookmark path
+      description: convert invoice pdf file text to json data
+      operationId: CreateJsonFromPdf
+      parameters:
+        - name: invoice_type
+          in: query
+          description: invoice type
+          required: true
+          explode: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/BasicResponse'
+                - type: object
+                  required:
+                    - data
+                  properties:
+                    data:
+                      type: object
+        '400':
+          description: Invalid request value
+        '405':
+          description: Validation http method
+        '500':
+          description: Internal error
+components:
+  schemas:
+    BasicResponse:
+      type: object
+      required:
+        - success
+        - error
+        - description
+      properties:
+        success:
+          type: boolean
+          description: the boolean value if request has been successful or not 
+          example: true
+        error:
+          type: string
+          description: the error message when request has been failed
+          example: ""
+        description:
+          type: string
+          description: the description of the request result
+          example: Proper messages for the situations

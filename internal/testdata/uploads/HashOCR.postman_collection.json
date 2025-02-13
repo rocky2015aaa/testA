@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "88e1d990-8544-4efd-a6c3-3ea23c55cb71",
+		"name": "HashOCR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "861554"
+	},
+	"item": [
+		{
+			"name": "tax",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/rocky/Downloads/27350AA.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9081/api/v1/pdf2json?invoice_type=tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"api",
+						"v1",
+						"pdf2json"
+					],
+					"query": [
+						{
+							"key": "invoice_type",
+							"value": "tax"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bakerty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/rocky/Downloads/bakerty.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9081/api/v1/pdf2json?invoice_type=bakerty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"api",
+						"v1",
+						"pdf2json"
+					],
+					"query": [
+						{
+							"key": "invoice_type",
+							"value": "bakerty"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "winners",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/rocky/Downloads/WinnersInvoice.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9081/api/v1/pdf2json?invoice_type=winners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"api",
+						"v1",
+						"pdf2json"
+					],
+					"query": [
+						{
+							"key": "invoice_type",
+							"value": "winners"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambaram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/rocky/Downloads/TambaramInvoice.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9081/api/v1/pdf2json?invoice_type=tambaram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"api",
+						"v1",
+						"pdf2json"
+					],
+					"query": [
+						{
+							"key": "invoice_type",
+							"value": "tambaram"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/rocky/Downloads/RPInvoice.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9081/api/v1/pdf2json?invoice_type=rp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"api",
+						"v1",
+						"pdf2json"
+					],
+					"query": [
+						{
+							"key": "invoice_type",
+							"value": "rp"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
